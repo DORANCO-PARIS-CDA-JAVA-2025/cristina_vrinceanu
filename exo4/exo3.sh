@@ -2,9 +2,11 @@
 
 CMD1: docker login
 
-CMD2: docker images , docker tag <image_id> <dockerhub_username>/<nom_image>:<tag>, docker tag 123abc456 monpseudo/mon_app:latest
+CMD2: docker images , docker tag my-app:latest myusername/my-app:latest
 
 
 
-CMD3: docker push monpseudo/mon_app:latest
+
+CMD3: docker push myusername/my-app:latest
+
 

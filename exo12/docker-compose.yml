@@ -1,0 +1,20 @@
+version: '3'
+services:
+  web:
+    image: nginx:latest
+    networks:
+      - app_network
+    ports:
+      - "8080:80"
+  
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydatabase
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
